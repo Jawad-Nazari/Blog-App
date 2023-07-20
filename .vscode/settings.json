@@ -1,4 +1,3 @@
 {
-  "files.eol": "\n",
-  "files.autoSave": "onFocusChange"
+  "files.eol": "\r\n"
 }
