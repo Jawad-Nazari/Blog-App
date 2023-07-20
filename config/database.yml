@@ -13,6 +13,8 @@ development:
 test:
   <<: *default
   database: blogapp
+  username: postgres
+  password: 1234.com
 
 production:
   <<: *default
