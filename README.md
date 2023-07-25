@@ -55,6 +55,9 @@ The **Blog App** is a classic example of a blog website. It is a fully functiona
 
 - Use RubyGems as a software package system.
 - Use database migration files to maintain database schema.
+- Added controllers for users and posts
+- Added routes for users and posts
+- Added views for Users and Posts  
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
