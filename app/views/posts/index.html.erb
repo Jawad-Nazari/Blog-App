@@ -1,1 +1,22 @@
-<p> This is to show all post</p>
+<%= render 'shared/user', user: @user %>
+
+<div class='index-box'>
+  <% @posts.each do |post| %>
+    <div class='box comments-box'>
+      <a href='/users/<%= post.author_id%>/posts/<%= post.id%>'><%= post.title%></a>
+      <p>
+        <%= post.text%>
+      </p>
+      <p class='counters'>Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></p>
+  </div>
+  <div class='box'>
+  <% post.recent_comments.each do |comment| %>
+      <p><%= comment.author.name %> - <%= comment.text %></p>
+    <% end %>
+  </div>
+  <br />
+  <% end %>
+  <div class='btn'>
+    <button class='pagination'>Pagination</button>
+  </div>
+</div>
