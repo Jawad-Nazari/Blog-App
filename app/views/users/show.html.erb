@@ -1,1 +1,22 @@
-<p> This is show page for a particular user </p>
+<%= render 'shared/user', user: @user %>
+
+<div class='info'>
+  <div class='box'>
+    <h1>Bio</h1>
+    <p>
+      <%= @user.bio %>
+    </p>
+  </div>
+
+  <% @user.recent_posts.each do |post| %>
+    <div class='box'>
+      <h2>Post <%= post.title %></h2>
+      <p>
+        <%= post.text %>
+      </p>
+      <p class='counters'>Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></p>
+    </div>
+  <% end %>
+
+  <a href='/users/<%= @user.id%>/posts' class='show-all'>Show All</a>
+</div>

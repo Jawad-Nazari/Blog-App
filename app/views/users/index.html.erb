@@ -1,1 +1,3 @@
-<p> This is index.html page to show all users </p>
+<% @users.each do |user| %>
+    <%= render partial: 'shared/user', locals: { user: user } %>
+<% end %>
