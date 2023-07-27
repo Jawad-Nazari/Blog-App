@@ -1,19 +1,18 @@
 <a name="readme-top"></a>
 
 # 📗 Table of Contents
+
 - [📗 Table of Contents](#-table-of-contents)
 - [📖 Blog App ](#-blog-app-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
     - [Install](#install)
     - [Usage ](#usage-)
     - [Run tests](#run-tests)
-    - [Deployment](#deployment)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
   - [⭐️ Show your support ](#️-show-your-support-)
@@ -22,6 +21,7 @@
 <!-- PROJECT DESCRIPTION -->
 
 # 📖 Blog App <a name="about-the-project"></a>
+
 The **Blog App** is a classic example of a blog website. It is a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 ## 🛠 Built With <a name="built-with"></a>
@@ -57,11 +57,9 @@ The **Blog App** is a classic example of a blog website. It is a fully functiona
 - Use database migration files to maintain database schema.
 - Added controllers for users and posts
 - Added routes for users and posts
-- Added views for Users and Posts  
-
+- Added views for Users and Posts
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 <!-- GETTING STARTED -->
 
@@ -70,9 +68,11 @@ The **Blog App** is a classic example of a blog website. It is a fully functiona
 ### Prerequisites
 
 In order to run this project you need:
+
 - [Ruby on Rails](https://rubyonrails.org/) installed and running. To get more information, read the [installation guide](https://guides.rubyonrails.org/).
 
 - [PostgreSQL](https://www.postgresql.org/) installed and running
+
 ### Setup
 
 Clone this repository to your desired folder:
@@ -109,15 +109,14 @@ To run all tests, including unit and integration tests, run the following comman
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- AUTHORS -->
+
 - ## 👥 Author <a name="author"></a>
- 
+
 👤 **Jawad Nazari**
 
 - GitHub: [@Jawad-Nazari](https://github.com/Jawad-Nazari)
 - Twitter: [@Nazari_Jawad58](https://twitter.com/Nazari_Jawad58)
 - LinkedIn: [@jawad-nazari](https://www.linkedin.com/in/jawad-nazari/)
-  
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -137,7 +136,7 @@ To run all tests, including unit and integration tests, run the following comman
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Jawad-Nazari/Blog-App.git/issues).
+Feel free to check the [issues page](https://github.com/Jawad-Nazari/Blog-App/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -146,6 +145,14 @@ Feel free to check the [issues page](https://github.com/Jawad-Nazari/Blog-App.gi
 ## ⭐️ Show your support <a name="support"></a>
 
 If you like this project and want to support me make cooler projects Give this project a Star.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+** I would like to thank Microverse**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
