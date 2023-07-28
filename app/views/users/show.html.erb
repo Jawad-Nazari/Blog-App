@@ -18,5 +18,6 @@
     </div>
   <% end %>
 
-  <a href='/users/<%= @user.id%>/posts' class='show-all'>Show All</a>
+  <a href='/users/<%= @user.id%>/posts' class='show-all btn'>Show All</a>
+  <button type="button" class="create-post btn"><%= link_to "Create Post", new_user_post_path(@user) %></button>
 </div>
