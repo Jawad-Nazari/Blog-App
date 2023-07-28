@@ -1,6 +1,6 @@
 <div class='show-container'>
   <div class='box'>
-    <div class='posts_container'>
+    <div class='posts-container'>
       <p><%= @post.title %> by <%= @post.author.name %></p>
       <p>Comments: <%= @post.comments_counter %> Likes: <%= @post.likes_counter %></p>
     </div>
@@ -11,7 +11,11 @@
   <br />
   <div class='box'>
     <% @post.comments.each do |comment| %>
-      <p><%= comment.author.name %>: <%= comment.text %></p>    
+      <p><%= comment.author.name %>: <%= comment.text %></p>
     <% end %>
   </div>
+  <button type="button" class="create-post-btn btn">
+    <%= link_to "Add a new comment", new_user_post_comment_path(user_id: @post.author.id, post_id: @post.id) %>
+  </button>
+   <%= render partial: "shared/like", locals: { like: Like.new, post_id: @post.id, user_id: @post.author.id } %>
 </div>
