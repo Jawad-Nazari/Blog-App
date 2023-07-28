@@ -60,8 +60,7 @@ a {
 }
 
 .show-all,
-.pagination
- {
+.pagination {
   align-self: center;
   width: max-content;
   border: solid 1px black;
