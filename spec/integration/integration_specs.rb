@@ -106,3 +106,70 @@ RSpec.describe 'User Index Page', type: :feature do
     end
   end
 end
+
+describe 'post page' do
+  before(:each) do
+    @user = User.create(
+      name: 'Jawad',
+      bio: 'BCS',
+      photo: 'https://drive.google.com/file/d/1OgXPAMMaFb1GIC6nHrjR07qUTbMESZsC/view?usp=sharing'
+    )
+    @post1 = Post.create(title: 'First Post', text: 'This is my first post', author_id: @user.id)
+    @post2 = Post.create(title: 'Second Post', text: 'This is my second post', author_id: @user.id)
+    @post3 = Post.create(title: 'Third Post', text: 'This is my third post', author_id: @user.id)
+    @comment = Comment.create(text: 'First comment', author_id: @user.id, post_id: @post1.id)
+    Like.create(author_id: @user.id, post_id: @post1.id)
+    @posts = [@post1, @post2, @post3]
+    visit(user_posts_path(@user.id))
+  end
+
+  it "shows user's profile picture" do
+    expect(page).to have_css('img[src*="https://drive.google.com/file/d/1OgXPAMMaFb1GIC6nHrjR07qUTbMESZsC/view?usp=sharing"]')
+  end
+
+  it 'post title' do
+    expect(page).to have_content 'First Post'
+  end
+
+  it 'likes count show' do
+    expect(page).to have_content 'Likes: 1'
+  end
+
+  it 'shows the comment count for each post' do
+    expect(page).to have_content('Comments: 1', count: 1)
+  end
+
+  it 'shows the users username' do
+    expect(page).to have_content('Jawad')
+  end
+
+  it 'shows the total number of posts for each user' do
+    User.all.each do |user|
+      expect(page).to have_content("Total number of posts are: #{user.posts.count}")
+    end
+  end
+
+  it 'shows posts title with correct link text' do
+    @posts.each do |post|
+      expect(page).to have_link(post.title, href: user_post_path(post.author, post))
+    end
+  end
+
+  it 'shows some of the posts body' do
+    expect(page).to have_content 'This is my first post'
+  end
+
+  it 'shows the first comment on a post' do
+    expect(page).to have_content(@comment.text)
+  end
+
+  it 'shows a section for pagination' do
+    expect(page).to have_content('Pagination')
+  end
+
+  it 'when user clicks on a post, it redirects to that post show page' do
+    click_link @post1.title
+    expect(page).to have_current_path user_post_path(@post1.author_id, @post1)
+  end
+end
+end
