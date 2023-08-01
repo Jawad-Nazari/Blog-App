@@ -172,4 +172,3 @@ describe 'post page' do
     expect(page).to have_current_path user_post_path(@post1.author_id, @post1)
   end
 end
-end
