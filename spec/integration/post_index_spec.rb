@@ -29,7 +29,6 @@ RSpec.describe 'Post Index', type: :system do
       expect(page).to have_content('Total number of posts are: 1')
     end
 
-
     it 'shows posts title' do
       expect(page).to have_content('Post #')
     end
