@@ -10,7 +10,6 @@ RSpec.describe 'Post Index', type: :system do
         bio: 'BCS',
         photo: 'https://drive.google.com/file/jawad.png'
       )
-      # @post = Post.create(title: 'First Post', text: 'This is my first post', author_id: @user.id)
       @post = @user.posts.create(title: 'Post #', text: 'This is my first post')
       @comment = Comment.create(text: 'First comment', author_id: @user.id, post_id: @post.id)
       Like.create(author_id: @user.id, post_id: @post.id)
