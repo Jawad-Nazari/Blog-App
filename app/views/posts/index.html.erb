@@ -9,6 +9,11 @@
       </p>
       <p class='counters'>Comments: <%= post.comments_counter %> Likes: <%= post.likes_counter %></p>
   </div>
+          <div>
+  <% if can? :delete, @post %>
+    <button type="button" class="delete_btn btn"><%= link_to "Delete Post", user_post_path(user_id: @post.author.id, id: @post.id), data: { turbo_method: :delete } %></button>
+  <% end %>
+          </div>
   <div class='box'>
   <% post.recent_comments.each do |comment| %>
       <p><%= comment.author.name %> - <%= comment.text %></p>
