@@ -2,18 +2,22 @@
   <div class='box'>
     <div class='posts-container'>
       <p><%= @post.title %> by <%= @post.author.name %></p>
-      <p>Comments: <%= @post.comments_counter %> Likes: <%= @post.likes_counter %></p>
     </div>
     <p>
       <%= @post.text %>
     </p>
   </div>
   <br />
+  
   <div class='box'>
     <% @post.comments.each do |comment| %>
       <p><%= comment.author.name %>: <%= comment.text %></p>
+      <% if can? :destroy, comment %>
+        <%= link_to "Delete Comment", user_post_comment_path(user_id: comment.author.id, post_id: @post.id, id: comment.id), data: { turbo_method: :delete }, class:'button_style' %>
+      <% end %>
     <% end %>
   </div>
+  <p>Comments: <%= @post.comments_counter %> Likes: <%= @post.likes_counter %></p>
   <button type="button" class="create-post-btn btn">
     <%= link_to "Add a new comment", new_user_post_comment_path(user_id: @post.author.id, post_id: @post.id) %>
   </button>
