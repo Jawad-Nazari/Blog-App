@@ -7,8 +7,12 @@
 }
 
 .img-box {
-  height: 100px;
-  width: 100px;
+  text-align: center;
+  display: flex;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 5%;
+  justify-content: center;
 }
 
 .my-card {
@@ -27,8 +31,7 @@
 
 .title {
   align-self: center;
-  padding: 0 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
 }
 
 .posts-counter {
@@ -93,4 +96,12 @@ a {
 .posts_container {
   display: flex;
   justify-content: center;
+}
+
+.forms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 50px;
 }
