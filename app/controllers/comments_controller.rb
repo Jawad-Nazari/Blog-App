@@ -3,6 +3,7 @@ class CommentsController < ApplicationController
   def new
     @comment = Comment.new
   end
+
   def create
     @comment = Comment.new(comment_params)
     @comment.author = current_user
@@ -15,6 +16,7 @@ class CommentsController < ApplicationController
       end
     end
   end
+
   def destroy
     @comment = Comment.find(params[:id])
     if @comment.destroy
@@ -24,7 +26,9 @@ class CommentsController < ApplicationController
       render :show, status: 400
     end
   end
+
   private
+
   def comment_params
     params.require(:comment).permit(:text)
   end
