@@ -13,12 +13,10 @@ Rails.application.routes.draw do
   end
 
   # Resources for the API
-  namespace :api do
-    namespace :v1 do
-      resources :users, only: [] do
-        resources :posts, only: [:index] do
-          resources :comments, only: [:index, :create]
-        end
+ namespace :api do
+    resources :users, only: [] do
+      resources :posts, only: [:index] do
+        resources :comments, only: [:index, :create]
       end
     end
   end
