@@ -58,6 +58,11 @@ The **Blog App** is a classic example of a blog website. It is a fully functiona
 - Added controllers for users and posts
 - Added routes for users and posts
 - Added views for Users and Posts
+- Added Likes and Comments for Blogs
+- Fix N+1 problem
+- Add Integrations
+- Add Authentication with devise gem
+- Add API endpoints
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -118,6 +123,12 @@ To run all tests, including unit and integration tests, run the following comman
 - Twitter: [@Nazari_Jawad58](https://twitter.com/Nazari_Jawad58)
 - LinkedIn: [@jawad-nazari](https://www.linkedin.com/in/jawad-nazari/)
 
+👤**Daniel Kigozi**
+
+- GitHub: [Daniel-Kigozi](https://github.com/Daniel-Kigozi)
+- Twitter: [@DanielKigozi15](https://twitter.com/@DanielKigozi15)
+- LinkedIn: [daniel-kigozi-375182208/](https://www.linkedin.com/indaniel-kigozi-375182208/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- FUTURE FEATURES -->
@@ -127,6 +138,7 @@ To run all tests, including unit and integration tests, run the following comman
 - Add Devise.
 - Add authorization rules.
 - Add API endpoints.
+- Add style to the app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
